@@ -45,7 +45,6 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: npm install
-      - run: npm run build:dev
       - run: npm run lint:ts
       - run: npm run lint:scss
       - run: npm run test:unit
