@@ -5,7 +5,7 @@ import i18nForTests from 'shared/config/i18n/i18nForTests';
 import { MemoryRouter } from 'react-router-dom';
 
 export interface componentRenderOptions {
-  route?: string
+    route?: string;
 }
 
 export function componentRender(component: ReactNode, options: componentRenderOptions = {}) {
@@ -18,6 +18,7 @@ export function componentRender(component: ReactNode, options: componentRenderOp
             <I18nextProvider i18n={i18nForTests}>
                 {component}
             </I18nextProvider>
+            ,
         </MemoryRouter>,
     );
 }

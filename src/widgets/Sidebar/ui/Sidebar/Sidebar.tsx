@@ -32,8 +32,8 @@ export const Sidebar = ({ className }: SidebarProps) => {
                 onClick={onToggle}
                 className={cls.collapseBtn}
                 theme={ButtonTheme.BACKGROUND_INVERTED}
-                square
                 size={ButtonSize.L}
+                square
             >
                 {collapsed ? '>' : '<'}
             </Button>
@@ -48,7 +48,6 @@ export const Sidebar = ({ className }: SidebarProps) => {
                         {t('Главная')}
                     </span>
                 </AppLink>
-
                 <AppLink
                     theme={AppLinkTheme.SECONDARY}
                     to={RoutePath.about}
@@ -62,7 +61,10 @@ export const Sidebar = ({ className }: SidebarProps) => {
             </div>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
-                <LangSwitcher short={collapsed} className={cls.lang} />
+                <LangSwitcher
+                    short={collapsed}
+                    className={cls.lang}
+                />
             </div>
         </div>
     );
