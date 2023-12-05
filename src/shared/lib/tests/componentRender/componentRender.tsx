@@ -13,7 +13,8 @@ export interface componentRenderOptions {
 
 export function componentRender(component: ReactNode, options: componentRenderOptions = {}) {
     const {
-        route = '/', initialState,
+        route = '/',
+        initialState,
     } = options;
 
     return render(
@@ -22,7 +23,6 @@ export function componentRender(component: ReactNode, options: componentRenderOp
                 <I18nextProvider i18n={i18nForTests}>
                     {component}
                 </I18nextProvider>
-                ,
             </MemoryRouter>
         </StoreProvider>,
     );
